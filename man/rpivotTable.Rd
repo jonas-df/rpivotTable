@@ -4,10 +4,24 @@
 \alias{rpivotTable}
 \title{pivottable.js in R}
 \usage{
-rpivotTable(data, rows = NULL, cols = NULL, aggregatorName = NULL,
-  vals = NULL, rendererName = NULL, sorter = NULL, exclusions = NULL,
-  inclusions = NULL, locale = "en", subtotals = FALSE, ..., width = 800,
-  height = 600, elementId = NULL)
+rpivotTable(
+  data,
+  rows = NULL,
+  cols = NULL,
+  aggregatorName = NULL,
+  vals = NULL,
+  rendererLibraries = c("core", "D3", "C3"),
+  rendererName = NULL,
+  sorter = NULL,
+  exclusions = NULL,
+  inclusions = NULL,
+  locale = "en",
+  subtotals = FALSE,
+  ...,
+  width = 800,
+  height = 600,
+  elementId = NULL
+)
 }
 \arguments{
 \item{data}{data.frame or data.table (R>=1.9.6 for safety) with data to use in the pivot table}
@@ -21,6 +35,8 @@ the \strong{columns} of the pivot table.}
 \item{aggregatorName}{String name of the pivottable.js aggregator to prepopulate the pivot table.}
 
 \item{vals}{String name of the column in the data.frame to use with \code{aggregatorName}. Must be additive (i.e a number).}
+
+\item{rendererLibraries}{A vector containing one or more of "core", "D3", "C3", "plotly", "gchart", "export", "subtotals"}
 
 \item{rendererName}{List name of the renderer selected, e.g. Table, Heatmap, Treemap etc.}
 
@@ -52,7 +68,7 @@ Please note that this only pre-selects the visible filter(s) on the pivot table:
    \item{zh}
 }}
 
-\item{subtotals}{Logical this optional parameter allows use of the pivottable \href{https://github.com/nagarajanchinnasamy/pivottable-subtotal-renderer}{subtotal plugin}. Using this parameter will set all renderer names to the english locale.}
+\item{subtotals}{[DEPRICATED] Logical this optional parameter allows use of the pivottable \href{https://github.com/nagarajanchinnasamy/pivottable-subtotal-renderer}{subtotal plugin}. Using this parameter will set all renderer names to the english locale.}
 
 \item{...}{list other \href{https://github.com/nicolaskruchten/pivottable/wiki/Parameters}{parameters} that
 can be passed to \code{pivotUI}. See Nicolas's Wiki for more details.
