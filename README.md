@@ -31,7 +31,7 @@ The pivot table should appear in your RStudio Viewer or your browser of choice.
 
 Please refer to the examples and explanations [here](https://github.com/nicolaskruchten/pivottable/wiki/Parameters). 
 
-`rpivotTable` parameters decide how the pivot table will look like the firs time it is opened:
+`rpivotTable` parameters decide how the pivot table will look like the first time it is opened:
 
 * `data` can be a `data.frame` or `data.table`. Nothing else is needed.  If only the data is selected the pivot table opens with nothing on rows and columns (but you can at any time drag and drop any variable in rows or columns at your leasure)
 * `rows` and `cols` allow the user to create a report, i.e. to indicate which element will be on rows and columns.
